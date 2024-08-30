@@ -13,7 +13,6 @@ public class Grid : MonoBehaviour
     public Vector2 startPosition = new Vector2(0,0);
     public float squareScale = 1.0f;
     public float everySquareOffset = 0;
-    public bool isReset;//bien xac dinh grid co duoc tao moi khong
 
     private Vector2 offset = new Vector2 (0, 0);
     private List<GameObject> gridSquares = new List<GameObject>();
@@ -22,13 +21,10 @@ public class Grid : MonoBehaviour
     void Start()
     {
         //CreateGrid();
-        isReset = false;
     }
 
     public void CreateGrid()
     {
-        ResetGrid();
-        isReset = false;
         SpawnGridSquares();
         SetGridSquaresPosition();
     }
@@ -125,7 +121,25 @@ public class Grid : MonoBehaviour
     }
     public void ResetGrid()
     {
-        isReset = true;
+        int squareIndex = 0;
+        if (rows == 5)
+        {
+            squareIndex = 25;
+        }
+        if (rows == 4)
+        {
+            squareIndex = 16;
+        }
+        if (rows == 3)
+        {
+            squareIndex = 9;
+        }
+
+        for (int i = 0; i < squareIndex; i++)
+        {
+            GridSquare gridSquare = gridSquares[i].GetComponent<GridSquare>();
+            Destroy(gridSquare.gameObject);
+        }
         gridSquares.Clear();
     }
 }
