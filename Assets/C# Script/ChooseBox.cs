@@ -22,6 +22,7 @@ public class ChooseBox : MonoBehaviour
     void Start()
     {
         gridInstance = Grid.GetComponent<Grid>();
+
         box3x3.onClick.AddListener(Box3x3);
         box4x4.onClick.AddListener(Box4x4);
         box5x5.onClick.AddListener(Box5x5);

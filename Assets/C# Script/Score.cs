@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    public static Score scoreInstance;
+
     public int totalScore;
     public int scoreTmp;
 
@@ -17,8 +19,10 @@ public class Score : MonoBehaviour
     public GameObject ChooseBox;
     public GameObject Storage;
     public GameObject Grid;
+    public GameObject TimeOverPanel;
 
     public bool isReturnNewLevel = false;//bien xac dnh nguoi choi bam complete chua de xoa cac shape cu
+
     private Grid gridInstance;
 
     public void Start()
@@ -44,7 +48,7 @@ public class Score : MonoBehaviour
     }
 
     public void Complete()
-    { 
+    {
         Puzzle.SetActive(false);
         ChooseBox.SetActive(true);
         XepHinh.SetActive(false);
