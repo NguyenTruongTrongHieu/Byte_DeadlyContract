@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
@@ -135,11 +136,18 @@ public class Grid : MonoBehaviour
             squareIndex = 9;
         }
 
-        for (int i = 0; i < squareIndex; i++)
+        try
         {
-            GridSquare gridSquare = gridSquares[i].GetComponent<GridSquare>();
-            Destroy(gridSquare.gameObject);
+            for (int i = 0; i < squareIndex; i++)
+            {
+                GridSquare gridSquare = gridSquares[i].GetComponent<GridSquare>();
+                Destroy(gridSquare.gameObject);
+            }
+            gridSquares.Clear();
         }
-        gridSquares.Clear();
+        catch (ArgumentException Ex)
+        { 
+            Debug.Log(Ex);
+        }
     }
 }
