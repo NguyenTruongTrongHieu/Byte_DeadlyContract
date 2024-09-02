@@ -56,6 +56,7 @@ MonoBehaviour:
   ShapeImage: {fileID: 922722737528915446}
   shapeSelectedScale: {x: 1, y: 1, z: 1}
   offset: {x: -550, y: -432}
+  score: {fileID: 0}
   rectTransform: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!61 &9213277680911939423
@@ -101,7 +102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 119.2, y: 32.5}
+  m_Size: {x: 111.96, y: 19.4}
   m_EdgeRadius: 0
 --- !u!50 &4202606916594254963
 Rigidbody2D:
