@@ -41,8 +41,9 @@ public class TimeOneDay : MonoBehaviour
     private void Update()
     {
         //Dem thoi gian
-        int countTimer = (int)Math.Ceiling(timeOneDay);
-        countTime.text = countTimer.ToString();
+        int minute = Mathf.FloorToInt(timeOneDay / 60);
+        int second = Mathf.FloorToInt(timeOneDay % 60);
+        countTime.text = string.Format("{0}:{1}", minute, second);
 
         //Tinh thoi gian
         if (isContinue == true)
