@@ -47,7 +47,7 @@ public class StorageShape : MonoBehaviour
 
         for (int i = 0; i < shapesNumber; i++)
         {
-            int j = Random.Range(0, shapes.Count - 1);
+            int j = Random.Range(0, shapes.Count);
             shapeInGame.Add(shapes[j]);
         }
 

@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a3636a005442b4098b15087a1f47b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setTimeOneDay: 10
+  setTimeOneDay: 5000
   TimeOverPanel: {fileID: 325555695}
   Puzzle: {fileID: 86101095}
   XepHinh: {fileID: 1813568228}
@@ -3527,12 +3527,17 @@ MonoBehaviour:
   shapes:
   - {fileID: 7302104359545067157, guid: ea1f284e2bddd374d8aecfcff7a12c8d, type: 3}
   - {fileID: 1286765833405012711, guid: 6401f292f19137b4794eca2e70d3fc72, type: 3}
-  - {fileID: 1286765833405012711, guid: 6401f292f19137b4794eca2e70d3fc72, type: 3}
-  - {fileID: 1286765833405012711, guid: 6401f292f19137b4794eca2e70d3fc72, type: 3}
-  - {fileID: 1286765833405012711, guid: be0868499e12b82498028713b7d52ccd, type: 3}
-  - {fileID: 1286765833405012711, guid: 3829db3fa71a01a43903ac5fa707026a, type: 3}
-  - {fileID: 1286765833405012711, guid: c1de539653d4efe44ba3d305467a64b9, type: 3}
   - {fileID: 1286765833405012711, guid: ea17a6b7c6b7f7743ad72828808fc0c8, type: 3}
+  - {fileID: 1286765833405012711, guid: c1de539653d4efe44ba3d305467a64b9, type: 3}
+  - {fileID: 1286765833405012711, guid: 3829db3fa71a01a43903ac5fa707026a, type: 3}
+  - {fileID: 1286765833405012711, guid: be0868499e12b82498028713b7d52ccd, type: 3}
+  - {fileID: 1286765833405012711, guid: b67808719ff4502418bf7cbca7ad7978, type: 3}
+  - {fileID: 7302104359545067157, guid: ac15cb68e6f4bc1418b90f17d4ba3952, type: 3}
+  - {fileID: 1286765833405012711, guid: 99de0df34e7be554d9fd25615e40b34c, type: 3}
+  - {fileID: 1286765833405012711, guid: bc7b7221c6f25d64b803bc4ae0239d54, type: 3}
+  - {fileID: 1286765833405012711, guid: d5953621c6bbcf44f9cf25061ad748a2, type: 3}
+  - {fileID: 1286765833405012711, guid: 2a9564e6b31f35d4fa8f9d92d221b23d, type: 3}
+  - {fileID: 1286765833405012711, guid: 4c16c8bae99cf584ea3c4ec0f4340ca4, type: 3}
   shapeInGame: []
   Storage: {fileID: 1688387848}
   Puzzle: {fileID: 86101095}
@@ -3542,7 +3547,7 @@ MonoBehaviour:
   distance: 1
   distanceRow: 1
   ShapeScale: 0.6
-  shapesNumber: 4
+  shapesNumber: 9
   shapeNumberInRow: 3
 --- !u!212 &1688387851
 SpriteRenderer:
