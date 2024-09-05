@@ -43,7 +43,7 @@ public class TimeOneDay : MonoBehaviour
         //Dem thoi gian
         int minute = Mathf.FloorToInt(timeOneDay / 60);
         int second = Mathf.FloorToInt(timeOneDay % 60);
-        countTime.text = string.Format("{0}:{1}", minute, second);
+        countTime.text = string.Format("{0:00}:{1:00}", minute, second);
 
         //Tinh thoi gian
         if (isContinue == true)
