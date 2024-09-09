@@ -22,7 +22,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBe
     private BoxCollider2D boxCollider;
     private bool trungNhau;
     private bool isOutSideTheBox;
-    private Score scoreInstance;
+    private CompletePuzzle completeInstance;
 
     public void Awake()
     {
@@ -38,19 +38,19 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IBe
     public void Start()
     {
         score = GameObject.Find("Point");
-        scoreInstance = score.GetComponent<Score>();
+        completeInstance = score.GetComponent<CompletePuzzle>();
     }
 
     public void Update()
     {
-        if (scoreInstance == null)
+        if (completeInstance == null)
         {
             Debug.Log("score null");
             return;
         }
         else
         {
-            if (scoreInstance.isReturnNewLevel)
+            if (completeInstance.isReturnNewLevel)
             {
                 Destroy(this.gameObject);
             }

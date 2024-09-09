@@ -22,12 +22,12 @@ public class StorageShape : MonoBehaviour
     public int shapesNumber = 1;//Tong so luong item
     public int shapeNumberInRow = 1;//So luong item tren 1 hang
 
-    private Score scoreInstance;
+    private CompletePuzzle completeInstance;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreInstance = point.GetComponent<Score>();
+        completeInstance = point.GetComponent<CompletePuzzle>();
         nextCustomer.onClick.AddListener(SpawnItems);
     }
 
@@ -41,7 +41,7 @@ public class StorageShape : MonoBehaviour
 
     public void SpawnItems()
     {
-        scoreInstance.isReturnNewLevel = false;
+        completeInstance.isReturnNewLevel = false;
         shapeInGame.Clear();
         point.position = startPointPosition.position;
 
