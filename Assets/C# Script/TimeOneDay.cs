@@ -26,14 +26,14 @@ public class TimeOneDay : MonoBehaviour
     public Text countTime;
 
     private Grid gridInstance;
-    private Score scoreInstance;
+    private CompletePuzzle completeInstance;
 
     public void Start()
     {
         playAgain.onClick.AddListener(OutOfTime);
 
         gridInstance = Grid.GetComponent<Grid>();
-        scoreInstance = Score.GetComponent<Score>();
+        completeInstance = Score.GetComponent<CompletePuzzle>();
         timeOneDay = setTimeOneDay;
         isContinue = true;
     }
@@ -70,7 +70,7 @@ public class TimeOneDay : MonoBehaviour
         XepHinh.SetActive(false);
         TimeOverPanel.SetActive(false);
 
-        scoreInstance.isReturnNewLevel = true;
+        completeInstance.isReturnNewLevel = true;
         Storage.transform.SetParent(play.transform);
         gridInstance.ResetGrid();
     }

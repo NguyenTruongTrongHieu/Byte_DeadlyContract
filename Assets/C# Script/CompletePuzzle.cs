@@ -3,14 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
+public class CompletePuzzle : MonoBehaviour
 {
-    public static Score scoreInstance;
-
-    public int totalScore;
-    public int scoreTmp;
-
-    public Text scoreText;
     public Button complete;
     public Button play;
 
@@ -34,17 +28,6 @@ public class Score : MonoBehaviour
         complete.onClick.AddListener(Complete);
 
         gridInstance = Grid.GetComponent<Grid>();
-    }
-
-    public void AddScore()
-    { 
-        totalScore += scoreTmp;
-        scoreTmp = 0;
-    }
-
-    public void SetScore()
-    { 
-        scoreText.text = $"Score: {totalScore}";
     }
 
     public void Complete()
