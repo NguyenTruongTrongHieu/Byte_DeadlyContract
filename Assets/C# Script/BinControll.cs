@@ -45,19 +45,22 @@ public class BinControll : MonoBehaviour
             {
                 Instantiate(bottomBunObj, new Vector2(firstPositionOnCuttingBoard, -1f), Quaternion.identity);
                 Instantiate(topBunObj, new Vector2(firstPositionOnCuttingBoard, -0.8f), Quaternion.identity);
-                Gameplay.cuttingboardS1 = "full";
+                Gameplay.cuttingboardS1 = "JustBun";
+                Gameplay.selectedSlot = 1;
             }
             else if (Gameplay.cuttingboardS2 == "empty")
             {
                 Instantiate(bottomBunObj, new Vector2(secondPositionOnCuttingBoard, -1f), Quaternion.identity);
                 Instantiate(topBunObj, new Vector2(secondPositionOnCuttingBoard, -0.8f), Quaternion.identity);
-                Gameplay.cuttingboardS2 = "full";
+                Gameplay.cuttingboardS2 = "JustBun";
+                Gameplay.selectedSlot = 2;
             }
             else if (Gameplay.cuttingboardS3 == "empty")
             {
                 Instantiate(bottomBunObj, new Vector2(thirdPositionOnCuttingBoard, -1f), Quaternion.identity);
                 Instantiate(topBunObj, new Vector2(thirdPositionOnCuttingBoard, -0.8f), Quaternion.identity);
-                Gameplay.cuttingboardS3 = "full";
+                Gameplay.cuttingboardS3 = "JustBun";
+                Gameplay.selectedSlot = 3;
             }
         }
         if (gameObject.name == "hamburgers")
