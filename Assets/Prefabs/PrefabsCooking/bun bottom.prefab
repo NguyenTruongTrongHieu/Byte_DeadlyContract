@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2791097436799209272}
   - component: {fileID: 1961503605703921839}
   - component: {fileID: 8260007262909277172}
+  - component: {fileID: 1215100499735251348}
   m_Layer: 0
   m_Name: bun bottom
   m_TagString: Untagged
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.36
+--- !u!114 &1215100499735251348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897868580264977160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31644d20daadd664dbd5773963acf25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

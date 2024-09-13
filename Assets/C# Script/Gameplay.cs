@@ -12,6 +12,14 @@ public class Gameplay : MonoBehaviour
     public static string grillS2 = "empty";
     public static string grillS3 = "empty";
 
+    public static int selectedSlot = 0;
+    public static int selectedSandwich = 0;
+
+    public KeyCode giveFood;
+    public static string deleteFood = "no";
+
+    public static string currentMeat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +29,9 @@ public class Gameplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown (giveFood))
+        {
+            deleteFood = "yes";
+        }
     }
 }
