@@ -15,6 +15,8 @@ public class CookFood : MonoBehaviour
     private float secondPositionOnGrill = 6.5f;
     private float thirdPositionOnGrill = 7.5f;
 
+    private string ripeness;
+
     public int occupiedSlot = 100;
 
     public string mouseControlled = "no";
@@ -34,14 +36,17 @@ public class CookFood : MonoBehaviour
         if (cookingTime <= 3)
         {
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+            ripeness = "notYet";
         }
         if ((cookingTime > 3 && cookingTime <= 6) && (transform.position.x > 5))
         { 
             GetComponent<SpriteRenderer>().color = new Color (1, 1, 0);
+            ripeness = "ripe";
         }
         if ((cookingTime > 6) && (transform.position.x > 5))
         {
             GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
+            ripeness = "burn";
         }
 
         if (occupiedSlot == Gameplay.selectedSandwich)
@@ -77,7 +82,7 @@ public class CookFood : MonoBehaviour
             Gameplay.grillS3 = "empty";
         }
 
-        if ((Gameplay.cuttingboardS1 == "JustBun") && (toppingStatus != "placed"))
+        if ((Gameplay.cuttingboardS1 == "JustBun") && (toppingStatus != "placed") && ripeness == "ripe")
         {
             GetComponent<Transform>().position = new Vector2 (firstPositionOnCuttingBoard, -1f);
             Gameplay.cuttingboardS1 = "FullBun";
@@ -85,7 +90,7 @@ public class CookFood : MonoBehaviour
             toppingStatus = "placed";
         }
         else
-            if ((Gameplay.cuttingboardS2 == "JustBun") && (toppingStatus != "placed"))
+            if ((Gameplay.cuttingboardS2 == "JustBun") && (toppingStatus != "placed") && ripeness == "ripe")
         {
             GetComponent<Transform>().position = new Vector2(secondPositionOnCuttingBoard, -1f);
             Gameplay.cuttingboardS2 = "FullBun";
@@ -93,7 +98,7 @@ public class CookFood : MonoBehaviour
             toppingStatus = "placed";
         }
         else
-            if ((Gameplay.cuttingboardS3 == "JustBun") && (toppingStatus != "placed"))
+            if ((Gameplay.cuttingboardS3 == "JustBun") && (toppingStatus != "placed") && ripeness == "ripe")
         {
             GetComponent<Transform>().position = new Vector2(thirdPositionOnCuttingBoard, -1f);
             Gameplay.cuttingboardS3 = "FullBun";
