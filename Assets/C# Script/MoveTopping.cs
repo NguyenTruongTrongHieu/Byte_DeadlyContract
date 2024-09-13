@@ -22,7 +22,6 @@ public class MoveTopping : MonoBehaviour
             Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 ojPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = new Vector2(ojPosition.x, ojPosition.y - .4f);
-            
         }
 
         if ((Gameplay.deleteFood == "yes") && (mouseControlled == "yes"))
