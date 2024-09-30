@@ -29,7 +29,8 @@ public class checkbox : MonoBehaviour
         center = new Vector2(itemcheckbox.position.x,itemcheckbox.position.y);
         size = new(8f, 1f);
         boxcheck = Physics2D.OverlapBox(center, size, 0, box);
-        
+
+        diemhienthi.text = ($"diem : {point.diemtong}");
     }
     public void tongket()
     {
