@@ -8,11 +8,12 @@ public class MoveSandwich : MonoBehaviour
 
     public int occupiedSlot = 0;    
 
-    public string mousecontrolled = "no";
+    public string mousecontrolled;
     // Start is called before the first frame update
     void Start()
     {
         occupiedSlot = Gameplay.selectedSlot;
+        mousecontrolled = "no";
 
         //Chinh vi tri cua banh
         if (transform.position == new Vector3(-1, -0.8f, 0))
@@ -32,6 +33,7 @@ public class MoveSandwich : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (mousecontrolled == "yes")
         {
             Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -55,6 +57,8 @@ public class MoveSandwich : MonoBehaviour
 
         if ((Gameplay.deleteFood == "yes") && (mousecontrolled == "yes"))
         {
+            //Gameplay.deleteFood = "no";
+            Gameplay.selectedSlot = 0;
             Destroy(gameObject);
         }
     }

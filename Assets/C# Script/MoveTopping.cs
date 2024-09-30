@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class MoveTopping : MonoBehaviour
 {
-    public int occupiedSlot = 99;
+    public int occupiedSlot = 200;
 
-    public string mouseControlled = "no";
+    public string mouseControlled;
     // Start is called before the first frame update
     void Start()
     {
         occupiedSlot = Gameplay.selectedSlot;
+        mouseControlled = "no";
     }
 
     // Update is called once per frame
